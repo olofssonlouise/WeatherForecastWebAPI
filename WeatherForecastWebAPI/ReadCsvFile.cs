@@ -21,18 +21,5 @@ namespace WeatherForecastWebAPI
 
         }
 
-        public string GetJsonData()
-        {
-            List<WeatherForecast> forecast = GetData();
-
-            string jsonResult = JsonConvert.SerializeObject(forecast, Formatting.Indented);                                     //Skapar en json fil av csv-filen
-            //string jsonPath = @"C:/Users/louise.olofsson/source/repos/WeatherForecastWebAPI/WeatherForecastWebAPI/weather.json"; //path vart json fil ska skapas
-            //using (var tw = new StreamWriter(jsonPath, true))                                                //skriver ut json fil och sparar i fil "weather.json".
-            //{
-            //    tw.WriteLine(jsonResult.ToString());
-            //    tw.Close();
-            //}
-            return jsonResult;
-        }
     }
 }
